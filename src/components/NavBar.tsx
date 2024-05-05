@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import { langContext } from "../../contexts/langContext";
-import { ThemeContext } from "../../contexts/ThemeContext";
+import { langContext } from "../contexts/langContext";
+import { ThemeContext } from "../contexts/ThemeContext";
 import { NavLink } from "react-router-dom";
-import { lngs } from "../../translation/lngs";
+import { lngs } from "../translation/lngs";
 import { BiMoon, BiSun } from "react-icons/bi";
 
 const NavBar = () => {

@@ -14,7 +14,7 @@ import {
     DrawerContent, useDisclosure
 } from '@chakra-ui/react';
 import PrimaryBtn from "../components/PrimaryBtn/PrimaryBtn";
-import NavBar from "../components/PrimaryBtn/NavBar";
+import NavBar from "../components/NavBar";
 
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
