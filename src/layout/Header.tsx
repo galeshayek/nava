@@ -32,7 +32,7 @@ const Header = () => {
         )
     } else {
         return (
-            <header className="bg-complimantry sticky top-0 translate-y-0 py-4 pl-4">
+            <header className="bg-complimantry sticky top-0 translate-y-0 py-4 pl-4 ">
                 <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
                     <PrimaryBtn>
                         <BiMenu className="text-3xl text-oposite" />
@@ -49,7 +49,7 @@ const Header = () => {
                     <DrawerOverlay onClick={onClose} />
                     <DrawerContent>
                         <DrawerHeader>
-                            <div className="bg-oposite flex gap-5">
+                            <div className="bg-oposite flex gap-5 z-20">
                                 <div className="space-x-1 *:border-2 *:rounded *:border-primary *:px-2">
                                     {Object.keys(lngs).map((lng) => (
                                         <button className="text-2xl" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
@@ -62,7 +62,7 @@ const Header = () => {
                         </DrawerHeader>
 
                         <DrawerBody>
-                            <div className="bg-oposite border-b-4 border-pop pb-3">
+                            <div className="bg-oposite border-b-4 border-pop pb-3 z-20">
                                 <NavBar />
                             </div>
                         </DrawerBody>
