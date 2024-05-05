@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+    --primary: 27, 76, 220;
+    --complimantry: 92, 110, 157;
+    --pop: 1, 33, 130;
+    --base: 36, 36, 36;
+    --text: 255, 255, 255
+}
+
+.light {
+    --primary: 109, 141, 237;
+    --complimantry: 66, 78, 112;
+    --pop: 1, 33, 130;
+    --base: 255,
+        255,
+        255;
+    --text: 36, 36, 36;
+}
+
+html {
+    scroll-behavior: smooth;
+}
