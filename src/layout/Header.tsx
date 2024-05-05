@@ -6,15 +6,12 @@ import { lngs } from "../translation/lngs";
 import { langContext } from "../contexts/langContext";
 import './style.scss';
 import useWindowSize from "../hooks/useWindowSize";
-import { FcMenu } from "react-icons/fc"
 import {
     Button,
     Drawer,
     DrawerBody, DrawerHeader,
     DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-    useDisclosure
+    DrawerContent, useDisclosure
 } from '@chakra-ui/react';
 import PrimaryBtn from "../components/PrimaryBtn/PrimaryBtn";
 import NavBar from "../components/PrimaryBtn/NavBar";

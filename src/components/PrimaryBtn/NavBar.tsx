@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { lngs } from "../../translation/lngs";
 import { BiMoon, BiSun } from "react-icons/bi";
 
-const NavBar = (props?: any) => {
+const NavBar = () => {
     const { updateLang, lang } = useContext(langContext);
     const { t } = useTranslation()
     const { i18n } = useTranslation();
