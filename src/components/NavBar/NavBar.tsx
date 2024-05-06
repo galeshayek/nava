@@ -5,6 +5,7 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 import { NavLink } from "react-router-dom";
 import { lngs } from "../../translation/lngs";
 import { BiMoon, BiSun } from "react-icons/bi";
+import './style.scss'
 
 const NavBar = () => {
     const { updateLang, lang } = useContext(langContext);
