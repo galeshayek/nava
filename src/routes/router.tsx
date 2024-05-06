@@ -4,11 +4,13 @@ import Home from "./Home";
 import Fund from "./Fund";
 import Erech from "./Erech";
 import Consoult from "./Consoult/Consult";
+import ErrorEelement from "../components/ErrorElement/ErrorEelement";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorEelement />,
     children: [
       {
         index: true,

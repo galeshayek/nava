@@ -44,6 +44,11 @@ i18n
                             button: 'Send',
                         },
                     },
+                    error: {
+                        title: "Opps! this page doesn't exist",
+                        text: 'Oops! The page you are looking for does not exist. It might have been moved or deleted.',
+                        btn: 'Return to home page'
+                    },
                     homePage: {
                         hero: {
                             title: 'NAVA GAIZENBERG',
@@ -186,6 +191,11 @@ i18n
                             placeholder: 'אימייל:',
                             button: 'שליחה',
                         },
+                    },
+                    error: {
+                        title: 'הדף שאתה מחפש לא קיים',
+                        text: 'אופס! העמוד שאתה מחפש לא קיים. ייתכן שהוא הועבר או נמחק.',
+                        btn: 'חזור לדף הבית'
                     },
                     homePage: {
                         hero: {
