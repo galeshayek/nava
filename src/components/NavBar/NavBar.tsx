@@ -16,7 +16,7 @@ const NavBar = () => {
 
     return (
         <>
-            <Link to={'/'} className="size-12 lg:col-start-1 lg:col-end-2 self-end place-self-center">
+            <Link to={'/'} className="size-14 lg:col-start-1 lg:col-end-2 self-end place-self-center bg-slate-200 rounded-full p-1">
                 <img src={logo} alt="" />
             </Link>
 
