@@ -16,8 +16,8 @@ const NavBar = () => {
 
     return (
         <>
-            <Link to={'/'} className="size-14 lg:col-start-1 lg:col-end-2 self-end place-self-center bg-slate-200 rounded-full p-1">
-                <img src={logo} alt="" />
+            <Link to={'/'} className=" lg:size-14 lg:col-start-1 lg:col-end-2 self-end place-self-center bg-slate-200 rounded-full p-1">
+                <img className="w-14 m-auto" src={logo} alt="" />
             </Link>
 
             <ul className='lg:col-start-2 lg:col-end-3 flex flex-col lg:flex-row gap-4 lg:gap-0 text-primary lg:text-oposite justify-between items-center lg:items-end *:text-xl font-normal' dir={i18n.dir(lang)} >
