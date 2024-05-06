@@ -4,7 +4,6 @@ import { BiMenu, BiMoon, BiSun } from "react-icons/bi";
 import { useTranslation } from 'react-i18next';
 import { lngs } from "../translation/lngs";
 import { langContext } from "../contexts/langContext";
-import './style.scss';
 import useWindowSize from "../hooks/useWindowSize";
 import {
     Button,
@@ -24,7 +23,7 @@ const Header = () => {
     const { i18n } = useTranslation();
     const { toggle, theme } = useContext(ThemeContext);
 
-    if (width >= 1100) {
+    if (width >= 1024) {
         return (
             <header className="bg-complimantry grid grid-flow-col h-20 sticky pb-3 top-0 w-screen z-10">
                 <NavBar />

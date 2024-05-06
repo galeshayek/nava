@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next"
 import nava3 from '../../assets/nava3.webp'
-import PrimaryBtn from "../../components/PrimaryBtn/PrimaryBtn"
 import i18next from "i18next"
 
 const Hero = () => {

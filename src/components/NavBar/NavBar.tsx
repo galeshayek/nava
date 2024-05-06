@@ -14,7 +14,7 @@ const NavBar = () => {
 
     return (
         <>
-            <ul className='md:col-start-2 md:col-end-2 flex flex-col md:flex-row gap-4 md:gap-0 text-primary md:text-oposite justify-between items-center md:items-end *:text-xl font-normal' dir={i18n.dir(lang)} >
+            <ul className='lg:col-start-2 lg:col-end-2 flex flex-col lg:flex-row gap-4 lg:gap-0 text-primary lg:text-oposite justify-between items-center lg:items-end *:text-xl font-normal' dir={i18n.dir(lang)} >
                 <li>
                     <NavLink to="/" className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
@@ -33,7 +33,7 @@ const NavBar = () => {
                 }>{t('header.nav4')}</NavLink></li>
             </ul >
 
-            <div className="md:flex hidden gap-2 md:col-start-3 md:col-end-4 justify-end items-center md:items-end pr-3">
+            <div className="lg:flex hidden gap-2 lg:col-start-3 lg:col-end-4 justify-end items-center lg:items-end pr-3">
                 <div className="space-x-1">
                     {Object.keys(lngs).map((lng) => (
                         <button className="text-2xl" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
