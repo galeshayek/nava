@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import { langContext } from "../contexts/langContext";
-import { ThemeContext } from "../contexts/ThemeContext";
+import { langContext } from "../../contexts/langContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 import { NavLink } from "react-router-dom";
-import { lngs } from "../translation/lngs";
+import { lngs } from "../../translation/lngs";
 import { BiMoon, BiSun } from "react-icons/bi";
 
 const NavBar = () => {
@@ -14,7 +14,7 @@ const NavBar = () => {
 
     return (
         <>
-            <ul className='md:col-start-2 md:col-end-2 flex flex-col md:flex-row gap-4 md:gap-0 text-primary md:text-oposite justify-between items-center md:items-end *:text-xl font-light' dir={i18n.dir(lang)} >
+            <ul className='md:col-start-2 md:col-end-2 flex flex-col md:flex-row gap-4 md:gap-0 text-primary md:text-oposite justify-between items-center md:items-end *:text-xl font-normal' dir={i18n.dir(lang)} >
                 <li>
                     <NavLink to="/" className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
@@ -41,7 +41,7 @@ const NavBar = () => {
                         </button>
                     ))}
                 </div>
-                <button className="hover:bg-oposite/30 p-2 rounded text-2xl" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button>
+                <button className="hover:bg-textColor/30 text-oposite p-2 rounded text-2xl" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button>
             </div>
         </>
     )

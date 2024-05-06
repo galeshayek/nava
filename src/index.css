@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 .dark {
-    --primary: 27, 76, 220;
+    --primary: 82, 120, 234;
     --complimantry: 92, 110, 157;
-    --pop: 1, 33, 130;
-    --base: 36, 36, 36;
+    --pop: 232, 72, 112;
+    --base: 60, 60, 60;
     --text: 255, 255, 255
 }
 
 .light {
     --primary: 109, 141, 237;
     --complimantry: 66, 78, 112;
-    --pop: 1, 33, 130;
+    --pop: 229, 41, 88;
     --base: 255,
         255,
         255;

@@ -2,14 +2,14 @@ import i18next from "i18next"
 import { useTranslation } from "react-i18next"
 import nava4 from '../../assets/nava4.webp'
 import nava5 from '../../assets/nava5.webp'
-import './style.scss'
 
 const Consoult = () => {
     const { t } = useTranslation()
     return (
-        <section dir={i18next.dir()} className="consoultSection">
-            <h1 className="bg-primary text-center text-oposite text-5xl py-6 mb-3">{t('consoultPage.title')}</h1>
-            <div className="mx-12 space-y-2 mb-4">
+        <section dir={i18next.dir()} className="consoultSection grid grid-flow-row md:grid-flow-cols">
+            <h1 className="md:col-span-2 bg-primary text-center text-oposite text-5xl py-6 mb-3">{t('consoultPage.title')}</h1>
+
+            <div className="mx-12 space-y-2 mb-4 ">
                 <h1 className="text-xl font-medium">{t('consoultPage.text1')}</h1>
                 <p className="text-lg underline text-pop font-medium">{t('consoultPage.text2')}</p>
                 <ul className="space-y-1 bg-primary/30 p-2 rounded">
@@ -29,7 +29,8 @@ const Consoult = () => {
                     <li>&bull; {t('consoultPage.ul2.li3')}</li>
                 </ul>
             </div>
-            <div className="imgWrapper *:w-52 flex flex-col gap-5 *:rounded items-center pb-4">
+
+            <div className="*:w-5/12 justify-center md:justify-end  md:*:w-5/12 flex flex-row md:flex-col gap-5 *:rounded items-center pb-4">
                 <img src={nava4} alt={t('homePage.hero.altImg')} />
                 <img src={nava5} alt={t('homePage.hero.altImg')} />
             </div>

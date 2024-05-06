@@ -1,9 +1,0 @@
-.consoultSection {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(1, auto);
-
-    h1 {
-        grid-column: 1/-1;
-    }
-}

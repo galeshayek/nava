@@ -1,13 +1,13 @@
-import i18next from "i18next"
-import { useTranslation } from "react-i18next"
-import { BiArrowBack, BiLogoFacebook, BiLogoWhatsapp, } from "react-icons/bi"
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
+import { BiArrowBack, BiLogoFacebook, BiLogoWhatsapp, } from "react-icons/bi";
 import { IoMailOutline } from "react-icons/io5";
 
 
 const Footer = () => {
     const { t } = useTranslation()
     return (
-        <footer className="bg-complimantry flex flex-col items-center md:flex-row justify-center gap-16 py-10" dir={i18next.dir()}>
+        <footer className="bg-complimantry flex flex-col items-center md:flex-row justify-center md:items-start gap-16 py-10" dir={i18next.dir()}>
             <section className="order-1">
                 <h4 className=" text-xl text-oposite border-b-2 border-oposite pb-1 text-center mb-2">                        {t('footer.links.title')}
                 </h4>
@@ -35,14 +35,14 @@ const Footer = () => {
                         <a href="mailto:navagai3010@gmail.com" className="hover:underline">navagai3010@gmail.com</a>
                     </li>
                 </ul>
-                <div className="flex gap-3 justify-center pt-6 text-complimantry *:text-4xl *:inline-block *:bg-primary *:rounded-lg ">
-                    <a href="mailto:navagai3010@gmail.com" target="_blank" rel="noreferrer noopener">
+                <div className="flex gap-3 justify-center pt-6 text-complimantry *:text-5xl *:inline-block *:bg-pop *:rounded-lg">
+                    <a className="hover:scale-105 transition" href="mailto:navagai3010@gmail.com" target="_blank" rel="noreferrer noopener">
                         <IoMailOutline />
                     </a>
-                    <a href="https://wa.me/972508636388" target="_blank" rel="noreferrer noopener">
+                    <a className="hover:scale-105 transition" href="https://wa.me/972508636388" target="_blank" rel="noreferrer noopener">
                         <BiLogoWhatsapp />
                     </a>
-                    <a href="https://www.facebook.com/nava.gaizenberg" target="_blank" rel="noreferrer noopener">
+                    <a className="hover:scale-105 transition" href="https://www.facebook.com/nava.gaizenberg" target="_blank" rel="noreferrer noopener">
                         <BiLogoFacebook />
                     </a>
                 </div>
@@ -59,7 +59,7 @@ const Footer = () => {
                         aria-label={t('footer.subscribe.ariaLabel')}
                         placeholder={t('footer.subscribe.placeholder')}
                     />
-                    <button className="bg-primary flex justify-center items-center gap-2 rounded px-3 text-xl hover:bg-primary/70"> {t('footer.subscribe.button')}<BiArrowBack /></button>
+                    <button className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
                 </form>
             </section>
         </footer>

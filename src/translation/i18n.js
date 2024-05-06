@@ -129,7 +129,8 @@ i18n
                         text2: 'The unique aspect of supporting nonprofits lies in integrating a professional course alongside personalized mentoring for the organization.',
                         text3: 'The program combines tools from the business world alongside professional knowledge from years of working with philanthropists and donors.',
                         text4: 'Erech Laderech has accompanied approximately 400 nonprofits in a long-term program, provided focused advice to 600 organizations during emergencies, and operated a professional Facebook group—one of the largest and leading in Israel—with over 5,300 participants.',
-                        text5: "Within the framework of Erech Laderech, we engage approximately 30 of Israel's leading professionals in resource development. The program provides expertise in a wide range of areas such as:",
+                        text5: "Within the framework of Erech Laderech, we engage approximately 30 of Israel's leading professionals in resource development.",
+                        text6: 'The program provides expertise in a wide range of areas such as:',
                         ul1: {
                             li1: 'Fundraising from philanthropic foundations',
                             li2: 'Grant writing ',
@@ -149,7 +150,7 @@ i18n
                             li16: 'Creativity in fundraising',
                             li17: 'And more…',
                         },
-                        text6: 'What do we offer to organizations?',
+                        text7: 'What do we offer to organizations?',
                         ul2: {
                             li1: 'Participation in Erech Laderech program',
                             li2: 'Creating a strategic plan for each organization by its specific needs (Schools, Community Centers, Arab Society, Ultra-Orthodox Society, etc.',
@@ -264,7 +265,8 @@ i18n
                         text2: 'ליווי העמותות הנו ייחודי בזכות שילוב קורס מקצועי לצד ליווי פרטני לעמותה.',
                         text3: 'התכנית משלבת כלים מהעולם העסקי לצד איכות מקצועית בעבודה עם פילנתרופים ותורמים',
                         text4: '"ערך לדרך" ליוותה עד היום כ 400 עמותות בתכנית ארוכת טווח, 600 עמותות ביעוץ נקודתי בתקופת חירום לצד הפעלת קבוצת פייסבוק מקצועית מהגדולות והמובילות בישראל המונה מעל 5300 משתתפים.',
-                        text5: 'במסגרת ערך לדרך פועלים כ 30 מאנשי המקצוע המובילים בישראל בתחומי גיוס משאבים. התכנית מעניקה מומחיות במגוון רחב של תחומים כגון:',
+                        text5: 'במסגרת ערך לדרך פועלים כ 30 מאנשי המקצוע המובילים בישראל בתחומי גיוס משאבים.',
+                        text6: 'התכנית מעניקה מומחיות במגוון רחב של תחומים כגון:',
                         ul1: {
                             li1: 'גיוס מקרנות',
                             li2: 'בניית בקשה ותקציב לתורם',
@@ -284,7 +286,7 @@ i18n
                             li16: 'יצירתיות בגיוס',
                             li17: 'ועוד',
                         },
-                        text6: 'מה אנו מציעים לעמותות-',
+                        text7: 'מה אנו מציעים לעמותות-',
                         ul2: {
                             li1: 'השתתפות בתכנית ערך לדרך',
                             li2: '⁠בניית תכנית ייחודית לגופים  על פי צרכיהם( בתי ספר, מתנסים, חברה ערבית, חברה חרדית וכדומה)',
