@@ -2,10 +2,28 @@ import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { BiArrowBack, BiLogoFacebook, BiLogoWhatsapp, } from "react-icons/bi";
 import { IoMailOutline } from "react-icons/io5";
+import { useForm, SubmitHandler } from "react-hook-form"
+import { EmailForm } from "../@types/types";
+import { emailPattern } from "../validation/validation";
+import { postEmail } from "../services/axiosPost";
+
 
 
 const Footer = () => {
     const { t } = useTranslation()
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm<EmailForm>({
+        mode: 'onBlur'
+    })
+    const onSubmit: SubmitHandler<EmailForm> = (data) => {
+        postEmail(data)
+        reset()
+    }
+
     return (
         <footer className="bg-complimantry flex flex-col items-center md:flex-row justify-center md:items-start gap-16 py-10" dir={i18next.dir()}>
             <section className="order-1">
@@ -50,16 +68,34 @@ const Footer = () => {
 
             <section>
                 <h4 className="order-3 text-xl text-oposite border-b-2 border-oposite pb-1 text-center mb-5">{t('footer.subscribe.title')}</h4>
-                <form className="flex flex-col gap-3">
-                    <input
-                        className="border-4 border-primary rounded p-1"
-                        type="email"
-                        name="email"
-                        autoComplete="email"
-                        aria-label={t('footer.subscribe.ariaLabel')}
-                        placeholder={t('footer.subscribe.placeholder')}
-                    />
-                    <button disabled className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
+                <form
+                    noValidate
+                    onSubmit={handleSubmit(onSubmit)}
+                    className="flex flex-col gap-3">
+                    <div>
+                        <input
+                            className="border-4 border-primary rounded p-1"
+                            type="email"
+                            autoComplete="email"
+                            aria-label={t('footer.subscribe.ariaLabel')}
+                            placeholder={t('footer.subscribe.placeholder')}
+                            {
+                            ...register(
+                                "email", {
+                                required: true,
+                                pattern: {
+                                    value: emailPattern,
+                                    message: `${t('footer.subscribe.errorMsg')}`
+                                }
+                            }
+                            )
+                            }
+                        />
+                        {errors.email &&
+                            <p className="text-pop text-center">{errors.email?.message}</p>
+                        }
+                    </div>
+                    <button className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
                 </form>
             </section>
         </footer>

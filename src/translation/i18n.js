@@ -30,7 +30,7 @@ i18n
                             title: 'Contact me:',
                             phone: 'Phone:',
                             phoneNumber: '050-8636388',
-                            email: 'Email:'
+                            email: 'Email:',
                         },
                         links: {
                             title: 'Links',
@@ -42,6 +42,8 @@ i18n
                             ariaLabel: 'your email',
                             placeholder: 'Email:',
                             button: 'Send',
+                            errorMsg: 'Email is invalid'
+
                         },
                     },
                     error: {
@@ -178,7 +180,8 @@ i18n
                             title: 'צרו קשר',
                             phone: 'טלפון:',
                             phoneNumber: '050-8636388',
-                            email: 'אימייל:'
+                            email: 'אימייל:',
+
                         },
                         links: {
                             title: 'לינקים',
@@ -190,6 +193,8 @@ i18n
                             ariaLabel: 'האימייל שלך',
                             placeholder: 'אימייל:',
                             button: 'שליחה',
+                            errorMsg: 'אימייל לא תקין'
+
                         },
                     },
                     error: {
