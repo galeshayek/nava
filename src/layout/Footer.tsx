@@ -59,7 +59,7 @@ const Footer = () => {
                         aria-label={t('footer.subscribe.ariaLabel')}
                         placeholder={t('footer.subscribe.placeholder')}
                     />
-                    <button className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
+                    <button disabled className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
                 </form>
             </section>
         </footer>
