@@ -30,6 +30,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-], {
-  basename: '/nava/'
-});
+],);
