@@ -6,11 +6,13 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { EmailForm } from "../@types/types";
 import { emailPattern } from "../validation/validation";
 import { postEmail } from "../services/axiosPost";
+import { useState } from "react";
 
 
 
 const Footer = () => {
     const { t } = useTranslation()
+    const [errorMsg, seterrorMsg] = useState('')
     const {
         register,
         handleSubmit,
@@ -21,7 +23,22 @@ const Footer = () => {
     })
     const onSubmit: SubmitHandler<EmailForm> = (data) => {
         postEmail(data)
-        reset()
+            .then(r => {
+                switch (r.data.statusCode) {
+                    case 400:
+                        seterrorMsg('Email already exists');
+                        break;
+                    case 200:
+                        seterrorMsg('');
+                        reset();
+                        break;
+
+                }
+            }
+            )
+            .catch((e) => {
+                console.log(e)
+            })
     }
 
     return (
@@ -93,6 +110,9 @@ const Footer = () => {
                         />
                         {errors.email &&
                             <p className="text-pop text-center">{errors.email?.message}</p>
+                        }
+                        {errorMsg &&
+                            <p className="text-pop text-center">{errorMsg}</p>
                         }
                     </div>
                     <button className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
