@@ -7,12 +7,15 @@ import { EmailForm } from "../@types/types";
 import { emailPattern } from "../validation/validation";
 import { postEmail } from "../services/axiosPost";
 import { useState } from "react";
+import PropagateLoader from "react-spinners/BeatLoader";
+
 
 
 
 const Footer = () => {
     const { t } = useTranslation()
     const [errorMsg, seterrorMsg] = useState('')
+    const [loading, setloading] = useState(false)
     const {
         register,
         handleSubmit,
@@ -22,17 +25,18 @@ const Footer = () => {
         mode: 'onBlur'
     })
     const onSubmit: SubmitHandler<EmailForm> = (data) => {
+        setloading(true)
         postEmail(data)
             .then(r => {
+                setloading(false)
                 switch (r.data.statusCode) {
                     case 400:
                         seterrorMsg('Email already exists');
                         break;
                     case 200:
-                        seterrorMsg('');
+                        seterrorMsg('Email sent');
                         reset();
                         break;
-
                 }
             }
             )
@@ -111,10 +115,19 @@ const Footer = () => {
                         {errors.email &&
                             <p className="text-pop text-center">{errors.email?.message}</p>
                         }
+                        <div className={`${loading == true ? "flex" : 'hidden'} justify-center pt-2 pb-4`}>
+                            <PropagateLoader
+                                color='rgba(var(--primary))'
+                                loading={loading}
+                                aria-label="Loading Spinner"
+                                data-testid="loader"
+                            />
+                        </div>
                         {errorMsg &&
                             <p className="text-pop text-center">{errorMsg}</p>
                         }
                     </div>
+
                     <button className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
                 </form>
             </section>
