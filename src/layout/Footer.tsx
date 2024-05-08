@@ -31,10 +31,10 @@ const Footer = () => {
                 setloading(false)
                 switch (r.data.statusCode) {
                     case 400:
-                        seterrorMsg('Email already exists');
+                        seterrorMsg(`${t('footer.subscribe.errorMsg1')}`);
                         break;
                     case 200:
-                        seterrorMsg('Email sent');
+                        seterrorMsg(`${t('footer.subscribe.errorMsg2')}`);
                         reset();
                         break;
                 }

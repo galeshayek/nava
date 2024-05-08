@@ -35,7 +35,6 @@ const Header = () => {
                 <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
                     <PrimaryBtn>
                         <BiMenu className="text-3xl text-oposite" />
-
                     </PrimaryBtn>
                 </Button>
                 <Drawer

@@ -42,8 +42,9 @@ i18n
                             ariaLabel: 'your email',
                             placeholder: 'Email:',
                             button: 'Send',
-                            errorMsg: 'Email is invalid'
-
+                            errorMsg: 'Email is invalid',
+                            errorMsg1: 'Email already exists',
+                            errorMsg2: 'Email sent',
                         },
                     },
                     error: {
@@ -193,8 +194,9 @@ i18n
                             ariaLabel: 'האימייל שלך',
                             placeholder: 'אימייל:',
                             button: 'שליחה',
-                            errorMsg: 'אימייל לא תקין'
-
+                            errorMsg: 'אימייל לא תקין',
+                            errorMsg1: 'אימייל כבר קיים במערכת',
+                            errorMsg2: 'אימייל נשלח',
                         },
                     },
                     error: {
@@ -204,7 +206,7 @@ i18n
                     },
                     homePage: {
                         hero: {
-                            title: 'אני נאווה גייזנברג',
+                            title: 'נאווה גייזנברג',
                             btnText: 'ואני גייסת משאבים',
                             imgAlt: 'תמונת פרופיל של נאווה',
                         },
