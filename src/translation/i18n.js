@@ -45,6 +45,10 @@ i18n
                             errorMsg: 'Email is invalid',
                             errorMsg1: 'Email already exists',
                             errorMsg2: 'Email sent',
+                            checkBox: {
+                                ariaLabel: 'accept getting updates checkbox',
+                                label: 'Accept getting updates',
+                            },
                         },
                     },
                     error: {

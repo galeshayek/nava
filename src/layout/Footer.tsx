@@ -8,6 +8,7 @@ import { emailPattern } from "../validation/validation";
 import { postEmail } from "../services/axiosPost";
 import { useState } from "react";
 import PropagateLoader from "react-spinners/BeatLoader";
+import { Checkbox } from "@chakra-ui/react";
 
 
 
@@ -115,6 +116,24 @@ const Footer = () => {
                         {errors.email &&
                             <p className="text-pop text-center">{errors.email?.message}</p>
                         }
+
+                        <div>
+                            <div className="flex items-center space-x-2">
+                                <Checkbox
+                                    className="size-5 text-primary focus:ring-primary bg-oposite rounded"
+                                    type="checkbox"
+                                    id="updatesCheckbox"
+                                    {
+                                    ...register("receiveUpdates")
+                                    }
+                                />
+                                <label
+                                    aria-label={t('footer.subscribe.checkBox.ariaLabel')}
+                                    htmlFor="updatesCheckbox" className="font-medium text-sm text-pop">
+                                    {t('footer.subscribe.checkBox.label')}
+                                </label>
+                            </div>
+                        </div>
                         <div className={`${loading == true ? "flex" : 'hidden'} justify-center pt-2 pb-4`}>
                             <PropagateLoader
                                 color='rgba(var(--primary))'
