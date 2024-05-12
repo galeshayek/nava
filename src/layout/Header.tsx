@@ -1,6 +1,6 @@
 import { useContext, useRef } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
-import { BiArrowFromBottom, BiMenu, BiMoon, BiSun } from "react-icons/bi";
+import { BiMenu, BiMoon, BiSun } from "react-icons/bi";
 import { useTranslation } from 'react-i18next';
 import { lngs } from "../translation/lngs";
 import { langContext } from "../contexts/langContext";
@@ -14,15 +14,13 @@ import {
     Menu,
     MenuButton,
     MenuList,
-    MenuItem,
-    useBoolean
+    MenuItem
 } from '@chakra-ui/react';
 import PrimaryBtn from "../components/PrimaryBtn/PrimaryBtn";
 import NavBar from "../components/NavBar/NavBar";
 
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [flag, setFlag] = useBoolean()
     const btnRef = useRef<HTMLButtonElement>(null)
     const { width } = useWindowSize()
     const { updateLang } = useContext(langContext);
@@ -66,14 +64,14 @@ const Header = () => {
 
                     </DrawerContent>
                 </Drawer>
-                <Menu placement="bottom" onClose={() => setFlag.off()}>
-                    <MenuButton className={'px-3 bg-oposite rounded'} onClick={() => setFlag.toggle()}>
+                <Menu placement="bottom">
+                    <MenuButton className={'px-3 bg-oposite rounded'}>
                         Language
                     </MenuButton>
                     <MenuList className="text-textColor bg-oposite  p-2 rounded-md space-y-2">
                         {Object.keys(lngs).map((lng) => (
                             <MenuItem>
-                                <button className="p-1" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng), setFlag.off() }}>
+                                <button className="p-1" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
                                     {lngs[lng].nativeName}
                                 </button>
                             </MenuItem>
