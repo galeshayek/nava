@@ -8,7 +8,6 @@ const Consoult = () => {
     return (
         <section dir={i18next.dir()} className="consoultSection grid grid-flow-row md:grid-flow-cols">
             <h1 className="md:col-span-2 bg-primary text-center text-oposite text-5xl py-6 mb-3">{t('consoultPage.title')}</h1>
-
             <div className="mx-12 space-y-2 mb-4 ">
                 <h1 className="text-xl font-medium">{t('consoultPage.text1')}</h1>
                 <p className="text-lg underline text-pop font-medium">{t('consoultPage.text2')}</p>

@@ -1,11 +1,14 @@
 import i18next from "i18next"
 import { useTranslation } from "react-i18next"
 
+import diploma from '../assets/otherPhotos/diploma.webp'
+import group from '../assets/otherPhotos/group3.webp'
+
 const Fund = () => {
     const { t } = useTranslation()
     return (
-        <section dir={i18next.dir()}>
-            <h1 className="bg-primary text-center text-5xl text-oposite py-6 mb-3">{t('fundPage.title')}</h1>
+        <section dir={i18next.dir()} className="consoultSection grid grid-flow-row md:grid-flow-cols">
+            <h1 className="md:col-span-2 bg-primary text-center text-oposite text-5xl py-6 mb-3">{t('fundPage.title')}</h1>
             <div className="mx-12 space-y-2 mb-4">
                 <p className="text-xl font-medium">{t('fundPage.text1')}</p>
                 <p className="text-lg underline text-pop font-medium">{t('fundPage.text2')}</p>
@@ -23,6 +26,10 @@ const Fund = () => {
                     <li>&bull; {t('fundPage.li5')}</li>
                     <li>&bull; {t('fundPage.li6')}</li>
                 </ol>
+            </div>
+            <div className="*:w-5/12 justify-center md:justify-start  md:*:w-6/12 md:pl-5 flex flex-row md:flex-col gap-5 *:rounded items-center pb-4">
+                <img src={group} alt={t('homePage.hero.altImg')} />
+                <img src={diploma} alt={t('homePage.hero.altImg')} />
             </div>
         </section>
     )
