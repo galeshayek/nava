@@ -1,6 +1,5 @@
 import i18next from "i18next"
 import { useTranslation } from "react-i18next"
-import logo from '../assets/otherPhotos/erechladerechLogo.webp'
 import poster from '../assets/otherPhotos/erchPoster.webp'
 import group from '../assets/otherPhotos/group1.webp'
 import group2 from '../assets/otherPhotos/group2.webp'
