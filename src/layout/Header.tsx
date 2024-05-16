@@ -1,32 +1,24 @@
 import { useContext, useRef } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { BiMenu, BiMoon, BiSun } from "react-icons/bi";
-import { useTranslation } from 'react-i18next';
-import { lngs } from "../translation/lngs";
-import { langContext } from "../contexts/langContext";
 import useWindowSize from "../hooks/useWindowSize";
 import {
     Button,
     Drawer,
     DrawerBody, DrawerHeader,
     DrawerOverlay,
-    DrawerContent, useDisclosure,
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem
+    DrawerContent, useDisclosure
 } from '@chakra-ui/react';
 import PrimaryBtn from "../components/PrimaryBtn/PrimaryBtn";
 import NavBar from "../components/NavBar/NavBar";
+import LangBtn from "../components/LangBtn";
 
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef<HTMLButtonElement>(null)
     const { width } = useWindowSize()
-    const { updateLang } = useContext(langContext);
-    const { i18n } = useTranslation();
     const { toggle, theme } = useContext(ThemeContext);
-
+    //desktop
     if (width >= 1024) {
         return (
             <header className="bg-complimantry grid grid-flow-col h-20 sticky pb-3 top-0 w-screen z-10">
@@ -34,8 +26,9 @@ const Header = () => {
             </header>
         )
     } else {
+        //mobile
         return (
-            <header className="bg-complimantry sticky top-0 translate-y-0 py-4 pl-4 pr-10 flex  justify-between">
+            <header className="bg-complimantry sticky top-0 translate-y-0 py-4 pl-4 pr-10 flex justify-between items-center">
                 <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
                     <PrimaryBtn>
                         <BiMenu className="text-3xl text-oposite" />
@@ -61,23 +54,9 @@ const Header = () => {
                                 <NavBar />
                             </div>
                         </DrawerBody>
-
                     </DrawerContent>
                 </Drawer>
-                <Menu placement="bottom">
-                    <MenuButton className={'px-3 bg-oposite rounded'}>
-                        Language
-                    </MenuButton>
-                    <MenuList className="text-textColor bg-oposite  p-2 rounded-md space-y-2">
-                        {Object.keys(lngs).map((lng) => (
-                            <MenuItem>
-                                <button className="p-1" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
-                                    {lngs[lng].nativeName}
-                                </button>
-                            </MenuItem>
-                        ))}
-                    </MenuList>
-                </Menu>
+                <LangBtn />
             </header>
         )
     }

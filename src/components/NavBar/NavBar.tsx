@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next";
 import { langContext } from "../../contexts/langContext";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { Link, NavLink } from "react-router-dom";
-import { lngs } from "../../translation/lngs";
 import { BiMoon, BiSun } from "react-icons/bi";
-import './style.scss'
-import logo from '../../assets/logo.png'
+import './style.scss';
+import logo from '../../assets/logo.png';
+import LangBtn from "../LangBtn";
 
 const NavBar = () => {
-    const { updateLang, lang } = useContext(langContext);
+    const { lang } = useContext(langContext);
     const { t } = useTranslation()
     const { i18n } = useTranslation();
     const { toggle, theme } = useContext(ThemeContext);
@@ -40,13 +40,7 @@ const NavBar = () => {
             </ul >
 
             <div className="lg:flex hidden gap-2 lg:col-start-3 lg:col-end-4 justify-end items-center lg:items-end pr-3">
-                <div className="space-x-1">
-                    {Object.keys(lngs).map((lng) => (
-                        <button className="text-2xl" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
-                            {lngs[lng].flag}
-                        </button>
-                    ))}
-                </div>
+                <LangBtn />
                 <button className="hover:bg-textColor/30 text-oposite p-2 rounded text-2xl" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button>
             </div>
         </>

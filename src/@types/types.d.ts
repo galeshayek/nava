@@ -11,6 +11,9 @@ export interface LanguageMap {
 export type numberCard = { id: number, number: string, text: string }
 
 export type EmailForm = {
-    email: string,
+    firstName: string;
+    lastName: string;
+    email: string;
+    phoneNumber: string;
     receiveUpdates: boolean;
-};
+}

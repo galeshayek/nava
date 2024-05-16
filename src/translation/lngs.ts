@@ -6,7 +6,7 @@ export const lngs: LanguageMap = {
         flag: '🇺🇸',
     },
     he: {
-        nativeName: 'hebrew',
+        nativeName: 'עברית',
         flag: '🇮🇱',
     }
 };

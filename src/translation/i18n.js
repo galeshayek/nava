@@ -23,7 +23,8 @@ i18n
                         nav1: 'Home Page',
                         nav2: 'Center of excellence in philantropy',
                         nav3: 'Erech Laderech',
-                        nav4: 'Consulting and fundraising'
+                        nav4: 'Consulting and fundraising',
+                        langBtn: 'language'
                     },
                     footer: {
                         contact: {
@@ -39,16 +40,40 @@ i18n
                         },
                         subscribe: {
                             title: 'Subscribe',
-                            ariaLabel: 'your email',
-                            placeholder: 'Email:',
-                            button: 'Send',
-                            errorMsg: 'Email is invalid',
-                            errorMsg1: 'Email already exists',
-                            errorMsg2: 'Email sent',
+                            firstName: {
+                                ariaLabel: 'First Name',
+                                placeholder: 'First Name',
+                                required: 'Field is required',
+                                min: 'Name is too short',
+                                max: 'Name is too long',
+                            },
+                            lastName: {
+                                ariaLabel: 'Last Name',
+                                placeholder: 'Last Name',
+                                required: 'Field is required',
+                                min: 'Name is too short',
+                                max: 'Name is too long',
+                            },
+                            email: {
+                                ariaLabel: 'your email',
+                                placeholder: 'Email',
+                                required: 'Email is required',
+                                errorMsg: 'Email is invalid',
+                                errorMsg1: 'Email already exists',
+                                errorMsg2: 'Sent successfully',
+                            },
+                            number: {
+                                ariaLabel: 'Phone Number',
+                                placeholder: 'Phone Number',
+                                msg: 'Phone nuber is invalid'
+                            },
                             checkBox: {
                                 ariaLabel: 'accept getting updates checkbox',
                                 label: 'Accept getting updates',
                             },
+                            button: 'Send',
+                            errorMsg1: 'Email already exists',
+                            errorMsg2: 'Sent successfully',
                         },
                     },
                     error: {
@@ -178,7 +203,8 @@ i18n
                         nav1: 'דף הבית',
                         nav2: 'ניהול קרנות ויעוץ לפילנטרופים וחברות עסקיות',
                         nav3: 'ערך לדרך',
-                        nav4: 'יעוץ לרשויות בגיוס משאבים'
+                        nav4: 'יעוץ לרשויות בגיוס משאבים',
+                        langBtn: 'שפה'
                     },
                     footer: {
                         contact: {
@@ -194,17 +220,39 @@ i18n
                             item2: 'ערך לדרך באתר אלומות',
                         },
                         subscribe: {
-                            title: 'הירשמו',
-                            ariaLabel: 'האימייל שלך',
-                            placeholder: 'אימייל:',
-                            button: 'שליחה',
-                            errorMsg: 'אימייל לא תקין',
-                            errorMsg1: 'אימייל כבר קיים במערכת',
-                            errorMsg2: 'אימייל נשלח',
-                            checkBox: {
-                                ariaLabel: 'אני מאשר/ת קבלת עדכונים',
-                                label: 'אני מאשר/ת קבלת עדכונים',
+                            title: 'הרשמה',
+                            firstName: {
+                                ariaLabel: 'שם פרטי',
+                                placeholder: 'שם פרטי',
+                                required: 'שדה זה הוא חובה',
+                                min: 'שם קצר מדי',
+                                max: 'שם ארוך מדי',
                             },
+                            lastName: {
+                                ariaLabel: 'שם משפחה',
+                                placeholder: 'שם משפחה',
+                                required: 'שדה זה הוא חובה',
+                                min: 'שם קצר מדי',
+                                max: 'שם ארוך מדי',
+                            },
+                            email: {
+                                ariaLabel: 'האימייל שלך',
+                                placeholder: 'אימייל',
+                                required: 'שדה זה הוא חובה',
+                                errorMsg: 'אימייל לא תקין',
+                            },
+                            number: {
+                                ariaLabel: 'מספר טלפון',
+                                placeholder: 'מספר טלפון',
+                                msg: 'מספר טלפון לא תקין'
+                            },
+                            checkBox: {
+                                ariaLabel: 'אישור קבלת עדכונים',
+                                label: 'מאשר/ת קבלת עדכונים',
+                            },
+                            button: 'שליחה',
+                            errorMsg1: 'אימייל כבר קיים במערכת',
+                            errorMsg2: 'נשלח בהצלחה',
                         },
                     },
                     error: {
